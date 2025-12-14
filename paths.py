@@ -1,4 +1,4 @@
-SESSIONS = "/v4/sessions"
+SESSIONS = "/v5/sessions"
 GET_USERS = "/v1/cascade"
 GET_PROFILE = "/v4/profiles/"
 TAPS_RECIEVED = "/v1/interactions/taps/received"

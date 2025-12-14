@@ -73,7 +73,7 @@ class GrindrUser:
         self.xmppToken = response["xmppToken"]
 
     @check_banned
-    def get_profiles(self, lat, lon):
+    def get_profiles(self, lat, lon, searchParams={}):
         params = {
             "nearbyGeoHash": to_geohash(lat, lon),
             "onlineOnly": "false",
@@ -85,9 +85,7 @@ class GrindrUser:
             "rightNow": "false",
         }
 
-        response = generic_get(
-            GET_USERS,
-            params,
+        params.update(searchParams)
             auth_token=self.sessionId,
             proxy=self.proxy,
             proxy_port=self.proxy_port,

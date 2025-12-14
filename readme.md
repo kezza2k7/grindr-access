@@ -28,7 +28,7 @@ To use `grindrUser.py`, you should follow these steps:
 
 4. Use the provided methods to interact with the Grindr API. Here are some of the available methods:
 
-   - `get_profiles(lat, lon)`: Retrieve user profiles near a specific location.
+   - `get_profiles(lat, lon, searchParams)`: Retrieve user profiles near a specific location. Optionally provide searchParams for filtering, such as minAge and maxAge. 
 
    - `get_taps()`: Get the list of taps received.
 
